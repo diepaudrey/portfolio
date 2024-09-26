@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import Navigation from '../components/Navigation.vue'
+import HomeComponent from '../components/HomeComponent.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <section class="view">
+    <Navigation />
+    <HomeComponent />
+  </section>
 </template>
+
+<style></style>
