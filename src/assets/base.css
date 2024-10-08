@@ -87,3 +87,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.fade-left-enter-from, .fade-left-leave-to {
+  opacity: 0;
+  transform: translateX(60px);
+}
+
+.fade-left-enter-to, .fade-left-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-left-enter-active, .fade-left-leave-active {
+  transition: all 2s ease-in-out;
+}
+
+.fade-up-enter-from, .fade-left-leave-to {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.fade-up-enter-to, .fade-left-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-enter-active, .fade-left-leave-active {
+  transition: all 1s ease-in-out;
+}
+

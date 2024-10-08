@@ -1,9 +1,11 @@
 <template>
   <div class="main-container">
-    <div class="title-container">
-      <img src="../assets/graphic2.svg" alt="Minimalist Graphic Design" />
-      <h1>Gallery</h1>
-    </div>
+    <transition name="fade-left">
+      <div class="title-container" v-show="showTitle">
+        <img src="../assets/graphic2.svg" alt="Minimalist Graphic Design" />
+        <h1>Gallery</h1>
+      </div>
+    </transition>
     <div class="gallery">
       <div v-for="(image, key) in gallery">
         <Picture :image="image" :index="Number(key)" />
@@ -12,12 +14,32 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import gallery from '../assets/gallery.json'
+<script>
+import galleryData from '../assets/gallery.json'
 import Picture from './Picture.vue'
+
+export default {
+  components: {
+    Picture
+  },
+  data() {
+    return {
+      showTitle : false,
+      gallery: {} // Initialiser une propriété gallery vide
+    }
+  }, 
+  mounted() {
+    setTimeout(()=> {
+      this.showTitle = true
+    }, 1)
+
+    this.gallery = galleryData
+  }
+}
 </script>
 
 <style scoped>
+
 .title-container {
   width: 100%;
   display: flex;
@@ -28,6 +50,7 @@ import Picture from './Picture.vue'
 .main-container {
   display: flex;
   flex-direction: column;
+
 }
 
 .gallery {

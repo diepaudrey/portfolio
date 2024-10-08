@@ -1,31 +1,54 @@
 <template>
-  <div
-    :class="{
-      'picture-container': true,
-      'second-picture': isDivisibleByThree(props.index + 1),
-      'third-picture': isDivisibleByThree(props.index)
-    }"
-  >
-    <img :src="`/assets/gallery/${props.image.name}`" :alt="props.image.title" />
-    <div class="overlay">
-      <h2>{{ props.image.title }}</h2>
-      <p>{{ props.image.date }}</p>
+  <transition appear @before-enter="beforeEnter" @enter="enter" >
+    <div
+      :class="{
+        'picture-container': true,
+        'second-picture': isDivisibleByThree(index + 1),
+        'third-picture': isDivisibleByThree(index)
+      }"
+    >
+        <img :src="`/assets/gallery/${image.name}`" :alt="image.title" />
+        <div class="overlay">
+          <h2>{{ image.title }}</h2>
+          <p>{{ image.date }}</p>
+        </div>
     </div>
-  </div>
+  </transition>
 </template>
 
-<script setup lang="ts">
-const props = defineProps({
-  image: { type: Object, required: true },
-  index: { type: Number, required: true }
-})
-
-const isDivisibleByThree = (num: number) => {
-  return num % 3 === 0
+<script>
+import gsap from 'gsap'
+export default {
+  setup(props) {
+    const beforeEnter = (el) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(60px)'
+    }
+    const enter = (el) => {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 3,
+        ease: "slow(0.7,0.7,false)",
+        delay: props.index * 0.2
+      })
+    }
+    return {beforeEnter, enter}
+  },
+  props: {
+    image: { type: Object, required: true },
+    index: { type: Number, required: true }
+  }, 
+  methods: {
+    isDivisibleByThree(num) {
+      return num % 3 === 0
+    },
+  }
 }
 </script>
 
 <style scoped>
+
 .picture-container {
   position: relative;
   width: 25vw;

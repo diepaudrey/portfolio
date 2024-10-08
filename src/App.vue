@@ -1,4 +1,4 @@
-<script setup lang="ts"></script>
+<script></script>
 
 <template>
   <RouterView />
@@ -10,4 +10,5 @@
   flex-direction: column;
   justify-content: center;
 }
+
 </style>

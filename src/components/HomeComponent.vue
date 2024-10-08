@@ -1,32 +1,63 @@
 <template>
   <div class="container">
-    <div class="left-pannel">
-      <div class="illustration"></div>
-    </div>
-    <div class="right-pannel">
-      <div class="title-container">
-        <img class="graphic" src="../assets/graphic1.svg" alt="Minimalist graphic design" />
-        <h1>About me</h1>
+    <transition appear @beforeEnter="illuBeforeEnter" @enter="illuEnter">
+      <div class="left-pannel">
+        <div class="illustration"></div>
       </div>
-      <div class="text-container">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus laoreet odio id
-          lacinia. Quisque felis felis, ultrices et massa id, sollicitudin rutrum sem. Donec
-          interdum tristique condimentum. Sed elementum mi sit amet neque consectetur eleifend. Sed
-          gravida enim non massa tincidunt, at imperdiet justo lobortis. Proin luctus magna in
-          gravida euismod. Etiam eu turpis vitae risus fermentum lacinia vitae ac mauris. Proin
-          congue at neque vitae rutrum. Vivamus vehicula mauris id laoreet finibus. Integer commodo
-          tempus vestibulum. Morbi consequat tincidunt justo eget scelerisque. Curabitur ante risus,
-          sodales ac dapibus sed, finibus non turpis. Vivamus vulputate odio id semper tincidunt.
-          Vestibulum velit purus, congue id leo non, pellentesque semper magna. Cras sed vestibulum
-          justo, eu condimentum sapien.
-        </p>
+    </transition>
+    <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
+      <div class="right-pannel">
+        <div class="title-container">
+          <img class="graphic" src="../assets/graphic1.svg" alt="Minimalist graphic design" />
+          <h1>About me</h1>
+        </div>
+        <transition name="hover">
+          <div class="text-container">
+              <p>
+                Hey, I'm <span class="redHover"> Audrey DIEP</span> ! <br>
+                I'm a <span class="redHover"> Web Developper </span> and I wanted to create my website where I can share  <span class="redHover"> photos or projects</span> that I'm proud of. The design of this website is inspired by the semester in  <span class="redHover">Japan</span> I spent in 2023. I'm so grateful for this unforgetable experience ! 
+              </p>
+          </div>
+        </transition>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script>
+import gsap from 'gsap'
+export default {
+  setup() {
+    const illuBeforeEnter = (el) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(60px)'
+    }
+    const illuEnter = (el) => {
+      gsap.to(el, {
+        opacity: 1, 
+        y: 0,
+        duration: 2,
+        ease: "slow(0.7,0.7,false)",
+      })
+    }
+
+    const textBeforeEnter = (el) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateX(60px)'
+    }
+    const textEnter = (el) => {
+      gsap.to(el, {
+        opacity: 1, 
+        x: 0,
+        duration: 2,
+        ease: "sine.inOut",
+        delay: 0.2
+      })
+    }
+    return {illuBeforeEnter, illuEnter, textBeforeEnter, textEnter}
+  }
+}
+</script>
 
 <style scoped>
 .left-pannel {
@@ -41,12 +72,12 @@
   background-color: var(--vt-c-white-soft);
   border-radius: 50% 50% 0 0;
   background-image: url('../assets/portrait.jpg');
-  background-size: cover;
+  background-size: contain;
 }
 .right-pannel {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   padding: 50px;
 }
@@ -55,6 +86,7 @@
   grid-gap: 5%;
   justify-content: center;
   grid-template-columns: 40% 40%;
+  overflow: hidden;
 }
 .title-container {
   width: 100%;
@@ -67,6 +99,51 @@
   padding: 5%;
   color: var(--vt-c-black);
   background-color: var(--vt-c-white-soft);
+  animation: inverse-gradient 0.5s ease;
+}
+
+.text-container:hover  {
+  color:var(--vt-c-white-soft) ;
+  background-color: var(--vt-c-black);
+  animation: gradient 0.5s ease;
+  .redHover{
+    color: var(--red);
+    animation: text-gradient 1.5s ease;
+  }
+}
+
+
+@keyframes text-gradient {
+  0% {
+    color: var(--vt-c-white-soft);
+  }
+  100% {
+    color:var(--red) ;
+  }
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background-color: var(--vt-c-white-soft);
+    color: var(--vt-c-black);
+  }
+  100% {
+    color:var(--vt-c-white-soft) ;
+    background-color: var(--vt-c-black);;
+  }
+}
+
+@keyframes inverse-gradient {
+  100% {
+    background-color: var(--vt-c-white-soft);
+    color: var(--vt-c-black);
+  }
+  0% {
+    color:var(--vt-c-white-soft) ;
+    background-color: var(--vt-c-black);;
+  }
 }
 
 .graphic {
