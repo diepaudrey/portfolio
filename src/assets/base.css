@@ -1,5 +1,7 @@
 /* color palette from <https://github.com/vuejs/theme> */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -88,31 +90,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.fade-left-enter-from, .fade-left-leave-to {
+.fade-left-enter-from,
+.fade-left-leave-to {
   opacity: 0;
   transform: translateX(60px);
 }
 
-.fade-left-enter-to, .fade-left-leave-from {
+.fade-left-enter-to,
+.fade-left-leave-from {
   opacity: 1;
   transform: translateX(0);
 }
 
-.fade-left-enter-active, .fade-left-leave-active {
+.fade-left-enter-active,
+.fade-left-leave-active {
   transition: all 2s ease-in-out;
 }
 
-.fade-up-enter-from, .fade-left-leave-to {
+.fade-up-enter-from,
+.fade-left-leave-to {
   opacity: 0;
   transform: translateY(60px);
 }
 
-.fade-up-enter-to, .fade-left-leave-from {
+.fade-up-enter-to,
+.fade-left-leave-from {
   opacity: 1;
   transform: translateY(0);
 }
 
-.fade-up-enter-active, .fade-left-leave-active {
+.fade-up-enter-active,
+.fade-left-leave-active {
   transition: all 1s ease-in-out;
 }
-

@@ -11,9 +11,11 @@
 body {
   background:
     radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
-    radial-gradient(circle at 110% 100%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
+    radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
   background-color: var(--vt-c-black);
+  background-size: 180% 180%;
   z-index: -1;
+  animation: rotation 10s ease infinite;
 }
 
 a {
@@ -30,6 +32,31 @@ a:hover {
 h1 {
   font-size: 64px;
   padding: 0 20px 0 20px;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+@keyframes rotation {
+  0% {
+    background-position: top;
+  }
+  25% {
+    background-position: right;
+  }
+  50% {
+    background-position: bottom;
+  }
+  75% {
+    background-position: left;
+  }
+  100% {
+    background-position: top;
+  }
 }
 
 @media (min-width: 1024px) {

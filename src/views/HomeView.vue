@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Navigation from '../components/Navigation.vue'
 import HomeComponent from '../components/HomeComponent.vue'
 </script>

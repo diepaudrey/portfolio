@@ -5,7 +5,7 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import Navigation from '../components/Navigation.vue'
 import GalleryComponent from '../components/GalleryComponent.vue'
 </script>

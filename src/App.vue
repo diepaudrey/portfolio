@@ -1,4 +1,19 @@
-<script></script>
+<script>
+export default {
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      console.log('scroll')
+      this.$router.push('/gallery')
+    }
+  }
+}
+</script>
 
 <template>
   <RouterView />
@@ -10,5 +25,4 @@
   flex-direction: column;
   justify-content: center;
 }
-
 </style>

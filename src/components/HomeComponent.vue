@@ -12,11 +12,15 @@
           <h1>About me</h1>
         </div>
         <transition name="hover">
-          <div class="text-container">
+          <div class="animated-border">
+            <div class="text-container">
               <p>
-                Hey, I'm <span class="redHover"> Audrey DIEP</span> ! <br>
-                I'm a <span class="redHover"> Web Developper </span> and I wanted to create my website where I can share  <span class="redHover"> photos or projects</span> that I'm proud of. The design of this website is inspired by the semester in  <span class="redHover">Japan</span> I spent in 2023. I'm so grateful for this unforgetable experience ! 
+                Hey, I'm Audrey DIEP ! <br />
+                I'm a Web Developer and I wanted to create my website where I can share photos or
+                projects that I'm proud of. The design of this website is inspired by the semester
+                in Japan I spent in 2023. I'm so grateful for this unforgetable experience !
               </p>
+            </div>
           </div>
         </transition>
       </div>
@@ -29,32 +33,32 @@ import gsap from 'gsap'
 export default {
   setup() {
     const illuBeforeEnter = (el) => {
-      el.style.opacity = 0;
+      el.style.opacity = 0
       el.style.transform = 'translateY(60px)'
     }
     const illuEnter = (el) => {
       gsap.to(el, {
-        opacity: 1, 
+        opacity: 1,
         y: 0,
         duration: 2,
-        ease: "slow(0.7,0.7,false)",
+        ease: 'slow(0.7,0.7,false)'
       })
     }
 
     const textBeforeEnter = (el) => {
-      el.style.opacity = 0;
+      el.style.opacity = 0
       el.style.transform = 'translateX(60px)'
     }
     const textEnter = (el) => {
       gsap.to(el, {
-        opacity: 1, 
+        opacity: 1,
         x: 0,
         duration: 2,
-        ease: "sine.inOut",
+        ease: 'sine.inOut',
         delay: 0.2
       })
     }
-    return {illuBeforeEnter, illuEnter, textBeforeEnter, textEnter}
+    return { illuBeforeEnter, illuEnter, textBeforeEnter, textEnter }
   }
 }
 </script>
@@ -72,7 +76,8 @@ export default {
   background-color: var(--vt-c-white-soft);
   border-radius: 50% 50% 0 0;
   background-image: url('../assets/portrait.jpg');
-  background-size: contain;
+  background-size: cover;
+  background-position: bottom;
 }
 .right-pannel {
   display: flex;
@@ -89,12 +94,54 @@ export default {
   overflow: hidden;
 }
 .title-container {
-  width: 100%;
+  width: 99%;
   display: flex;
   justify-content: start;
 }
 
+.animated-border {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 50px 0 50px;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  display: block;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(102, 102, 102, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translate(0);
+  height: 400px;
+  width: 100px;
+  position: absolute;
+  animation: rotate 8s linear infinite;
+  z-index: 0;
+  top: 50%;
+  transform-origin: top center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .text-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 2px;
   border-radius: 0 50px 0 50px;
   padding: 5%;
   color: var(--vt-c-black);
@@ -102,27 +149,27 @@ export default {
   animation: inverse-gradient 0.5s ease;
 }
 
-.text-container:hover  {
-  color:var(--vt-c-white-soft) ;
+.text-container:hover {
+  color: var(--vt-c-white-soft);
   background-color: var(--vt-c-black);
   animation: gradient 0.5s ease;
-  .redHover{
+  .redHover {
     color: var(--red);
     animation: text-gradient 1.5s ease;
   }
 }
 
-
 @keyframes text-gradient {
   0% {
+    color: var(--vt-c-black);
+  }
+  25% {
     color: var(--vt-c-white-soft);
   }
   100% {
-    color:var(--red) ;
+    color: var(--red);
   }
 }
-
-
 
 @keyframes gradient {
   0% {
@@ -130,8 +177,8 @@ export default {
     color: var(--vt-c-black);
   }
   100% {
-    color:var(--vt-c-white-soft) ;
-    background-color: var(--vt-c-black);;
+    color: var(--vt-c-white-soft);
+    background-color: var(--vt-c-black);
   }
 }
 
@@ -141,8 +188,8 @@ export default {
     color: var(--vt-c-black);
   }
   0% {
-    color:var(--vt-c-white-soft) ;
-    background-color: var(--vt-c-black);;
+    color: var(--vt-c-white-soft);
+    background-color: var(--vt-c-black);
   }
 }
 
