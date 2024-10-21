@@ -5,24 +5,24 @@
         <div class="illustration"></div>
       </div>
     </transition>
-    <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
+    <transition appear @beforeEnter="textContainerBeforeEnter" @enter="textContainerEnter">
       <div class="right-pannel">
         <div class="title-container">
           <img class="graphic" src="../assets/graphic1.svg" alt="Minimalist graphic design" />
           <h1>About me</h1>
         </div>
-        <transition name="hover">
-          <div class="animated-border">
-            <div class="text-container">
+        <div class="animated-border">
+          <div class="text-container">
+            <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
               <p>
                 Hey, I'm Audrey DIEP ! <br />
                 I'm a Web Developer and I wanted to create my website where I can share photos or
                 projects that I'm proud of. The design of this website is inspired by the semester
                 in Japan I spent in 2023. I'm so grateful for this unforgetable experience !
               </p>
-            </div>
+            </transition>
           </div>
-        </transition>
+        </div>
       </div>
     </transition>
   </div>
@@ -45,11 +45,11 @@ export default {
       })
     }
 
-    const textBeforeEnter = (el) => {
+    const textContainerBeforeEnter = (el) => {
       el.style.opacity = 0
       el.style.transform = 'translateX(60px)'
     }
-    const textEnter = (el) => {
+    const textContainerEnter = (el) => {
       gsap.to(el, {
         opacity: 1,
         x: 0,
@@ -58,7 +58,39 @@ export default {
         delay: 0.2
       })
     }
-    return { illuBeforeEnter, illuEnter, textBeforeEnter, textEnter }
+    const textBeforeEnter = (el) => {
+      el.style.opacity = 0
+      el.style.transform = 'translatey(10px)'
+    }
+
+    const textEnter = (el) => {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'sine.inOut',
+        delay: 0.4
+      })
+    }
+
+    return {
+      illuBeforeEnter,
+      illuEnter,
+      textContainerBeforeEnter,
+      textContainerEnter,
+      textBeforeEnter,
+      textEnter
+    }
+  },
+  data() {
+    return {
+      isLoading: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = true
+    }, 1500)
   }
 }
 </script>
@@ -125,16 +157,6 @@ export default {
   z-index: 0;
   top: 50%;
   transform-origin: top center;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .text-container {

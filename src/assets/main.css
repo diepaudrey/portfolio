@@ -39,6 +39,7 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
+  animation: text 1.5s 0.8s ease;
 }
 
 @keyframes rotation {
@@ -56,6 +57,36 @@ p {
   }
   100% {
     background-position: top;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-fast {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(13rad);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
