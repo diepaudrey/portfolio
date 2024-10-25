@@ -8,16 +8,6 @@
   user-select: none; /* Standard syntax */
 }
 
-body {
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
-    radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
-  background-color: var(--vt-c-black);
-  background-size: 180% 180%;
-  z-index: -1;
-  animation: rotation 10s ease infinite;
-}
-
 a {
   text-decoration: none;
   color: var(--vt-c-white-soft);
@@ -30,6 +20,16 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  body {
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
+      radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
+    background-color: var(--vt-c-black);
+    background-size: 180% 500%;
+    z-index: -1;
+    animation: rotation 10s ease infinite;
+  }
+
   h1 {
     font-size: 12vw;
     padding: 0 20px 0 20px;
@@ -46,11 +46,19 @@ a:hover {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
+      radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
+    background-color: var(--vt-c-black);
+    background-size: 100% 500%;
+    z-index: -1;
+    animation: rotation 10s ease infinite;
+  }
   h1 {
     font-size: 48px;
     padding: 0 20px 0 20px;
   }
-
   p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -61,7 +69,16 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  body {
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
+      radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
+    background-color: var(--vt-c-black);
+    background-size: 180% 500%;
+    z-index: -1;
+    animation: rotation 10s ease infinite;
+  }
   h1 {
     font-size: 50px;
     padding: 0 20px 0 20px;
@@ -75,7 +92,16 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1024px) {
+  body {
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
+      radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
+    background-color: var(--vt-c-black);
+    background-size: 180% 180%;
+    z-index: -1;
+    animation: rotation 10s ease infinite;
+  }
   h1 {
     font-size: 64px;
     padding: 0 20px 0 20px;
