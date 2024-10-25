@@ -96,88 +96,221 @@ export default {
 </script>
 
 <style scoped>
-.left-pannel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-.illustration {
-  height: 700px;
-  width: 40vw;
-  background-color: var(--vt-c-white-soft);
-  border-radius: 50% 50% 0 0;
-  background-image: url('../assets/portrait.jpg');
-  background-size: cover;
-  background-position: bottom;
-}
-.right-pannel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-.container {
-  display: grid;
-  grid-gap: 5%;
-  justify-content: center;
-  grid-template-columns: 40% 40%;
-  overflow: hidden;
-}
-.title-container {
-  width: 99%;
-  display: flex;
-  justify-content: start;
+@media screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .right-pannel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .illustration {
+    height: 100vw;
+    margin: 5% 2% 5% 2%;
+    background-color: var(--vt-c-white-soft);
+    border-radius: 50% 50% 0 0;
+    background-image: url('../assets/portrait.jpg');
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .graphic {
+    width: 150px;
+  }
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .animated-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50px 0 50px;
+    overflow: hidden;
+    padding: 2px;
+  }
+
+  .animated-border::before {
+    content: '';
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translate(0);
+    height: 400px;
+    width: 50px;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+  }
+
+  .text-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 0 50px 0 50px;
+    padding: 5%;
+    color: var(--vt-c-white-soft);
+    background-color: var(--vt-c-black);
+  }
 }
 
-.animated-border {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 50px 0 50px;
-  overflow: hidden;
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .illustration {
+    height: 90vw;
+    margin: 5% 2% 5% 2%;
+    background-color: var(--vt-c-white-soft);
+    border-radius: 50% 50% 0 0;
+    background-image: url('../assets/portrait.jpg');
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .animated-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50px 0 50px;
+    overflow: hidden;
+    padding: 2px;
+  }
+
+  .animated-border::before {
+    content: '';
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translate(0);
+    height: 400px;
+    width: 50px;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+  }
+
+  .text-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 0 50px 0 50px;
+    padding: 5%;
+    color: var(--vt-c-white-soft);
+    background-color: var(--vt-c-black);
+  }
 }
 
-.animated-border::before {
-  content: '';
-  display: block;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(102, 102, 102, 0.75) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: translate(0);
-  height: 400px;
-  width: 100px;
-  position: absolute;
-  animation: rotate 8s linear infinite;
-  z-index: 0;
-  top: 50%;
-  transform-origin: top center;
-}
+@media screen and (min-width: 1024px) {
+  .left-pannel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 5% 0;
+  }
+  .illustration {
+    height: 80vh;
+    width: 100%;
+    background-color: var(--vt-c-white-soft);
+    border-radius: 50% 50% 0 0;
+    background-image: url('../assets/portrait.jpg');
+    background-size: cover;
+    background-position: bottom;
+  }
+  .right-pannel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .container {
+    display: grid;
+    grid-gap: 5%;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+    overflow: hidden;
+  }
+  .title-container {
+    width: 99%;
+    display: flex;
+    justify-content: start;
+  }
 
-.text-container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  margin: 2px;
-  border-radius: 0 50px 0 50px;
-  padding: 5%;
-  color: var(--vt-c-black);
-  background-color: var(--vt-c-white-soft);
-  animation: inverse-gradient 0.5s ease;
-}
+  .animated-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50px 0 50px;
+    overflow: hidden;
+  }
 
-.text-container:hover {
-  color: var(--vt-c-white-soft);
-  background-color: var(--vt-c-black);
-  animation: gradient 0.5s ease;
-  .redHover {
-    color: var(--red);
-    animation: text-gradient 1.5s ease;
+  .animated-border::before {
+    content: '';
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translate(0);
+    height: 400px;
+    width: 100px;
+    position: absolute;
+    animation: rotate 8s linear infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+  }
+
+  .text-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 2px;
+    border-radius: 0 50px 0 50px;
+    padding: 5%;
+    color: var(--vt-c-black);
+    background-color: var(--vt-c-white-soft);
+    animation: inverse-gradient 0.5s ease;
+  }
+
+  .text-container:hover {
+    color: var(--vt-c-white-soft);
+    background-color: var(--vt-c-black);
+    animation: gradient 0.5s ease;
+    .redHover {
+      color: var(--red);
+      animation: text-gradient 1.5s ease;
+    }
+  }
+  .graphic {
+    width: 35%;
   }
 }
 
@@ -213,9 +346,5 @@ export default {
     color: var(--vt-c-white-soft);
     background-color: var(--vt-c-black);
   }
-}
-
-.graphic {
-  width: 35%;
 }
 </style>
