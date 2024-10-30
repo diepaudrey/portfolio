@@ -7,7 +7,7 @@
         'third-picture': isDivisibleByThree(index)
       }"
     >
-      <img :src="`/assets/gallery/${image.name}`" :alt="image.title" />
+      <img :src="`/assets/gallery/${image.name}`" :alt="image.title" loading="lazy" />
       <div class="overlay">
         <h2>{{ image.title }}</h2>
         <p>{{ image.date }}</p>
@@ -124,39 +124,11 @@ export default {
 }
 @media screen and (min-width: 1024px) {
   .picture-container {
-    position: relative;
     width: 25vw;
     height: 25vw;
     img {
-      display: block;
       border-radius: 50px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
-  }
-
-  .picture-container:hover .overlay {
-    opacity: 1;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 50px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .second-picture {

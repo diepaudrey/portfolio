@@ -107,19 +107,19 @@ body {
   transition: all 2s ease-in-out;
 }
 
-.fade-up-enter-from,
-.fade-left-leave-to {
+.fade-right-enter-from,
+.fade-right-leave-to {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateX(-60px);
 }
 
-.fade-up-enter-to,
-.fade-left-leave-from {
+.fade-right-enter-to,
+.fade-right-leave-from {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
-.fade-up-enter-active,
-.fade-left-leave-active {
-  transition: all 1s ease-in-out;
+.fade-right-enter-active,
+.fade-right-leave-active {
+  transition: all 2s ease-in-out;
 }

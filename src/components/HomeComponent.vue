@@ -15,10 +15,13 @@
           <div class="text-container">
             <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
               <p>
-                Hey, I'm Audrey DIEP ! <br />
-                I'm a Web Developer and I wanted to create my website where I can share photos or
-                projects that I'm proud of. The design of this website is inspired by the semester
-                in Japan I spent in 2023. I'm so grateful for this unforgetable experience !
+                Hey, I'm Audrey DIEP! <br />
+                I'm a web developer, and I created this website to share projects and photos that
+                I'm proud of. <br />
+                I'm a creative person who enjoys all forms of art—videos, photography, drawing, and
+                design. <br />
+                The design of this site is inspired by my semester in Japan in 2023. I'm incredibly
+                grateful for this amazing experience!
               </p>
             </transition>
           </div>

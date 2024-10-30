@@ -3,14 +3,13 @@
     <div class="nav-bar">
       <RouterLink to="/">About</RouterLink>
       <img src="../assets/logo.svg" alt="Minimalist sun design" />
+      <RouterLink to="/projects">Web Projects</RouterLink>
       <RouterLink to="/gallery">Gallery</RouterLink>
     </div>
   </nav>
 </template>
 
-<script>
-import { RouterLink } from 'vue-router'
-</script>
+<script></script>
 
 <style scoped>
 @media screen and (max-width: 480px) {
@@ -72,7 +71,7 @@ import { RouterLink } from 'vue-router'
     }
   }
   .nav-container {
-    animation: folding 0.8s ease;
+    animation: folding 0.3s ease;
     height: 7vh;
     background-color: var(--vt-c-black);
     border-radius: 0 0 50px 50px;
@@ -89,8 +88,8 @@ import { RouterLink } from 'vue-router'
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: unfolding 0.8s ease;
-    border-bottom: solid 2px var(--vt-c-white-soft);
+    animation: unfolding 0.3s ease;
+    border-bottom: solid 2px var(--vt-c-text-dark-2);
   }
 }
 
@@ -101,14 +100,14 @@ import { RouterLink } from 'vue-router'
   }
   100% {
     height: 10vh;
-    border-bottom: solid 2px var(--vt-c-white-soft);
+    border-bottom: solid 2px var(--vt-c-text-dark-2);
   }
 }
 
 @keyframes folding {
   0% {
     height: 10vh;
-    border-bottom: solid 2px var(--vt-c-white-soft);
+    border-bottom: solid 2px var(--vt-c-text-dark-2);
   }
   100% {
     height: 7vh;
