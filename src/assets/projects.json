@@ -3,30 +3,35 @@
     "title": "Valorant App",
     "description": "Using the Valorant API, I developped an application that contains all the agents, weapons, and maps that can be found it the game. Each page has a special functionnality.",
     "url": "https://valorant-ad.netlify.app/#/",
-    "illustration": "valorant.jpg"
+    "illustration": "valorant.jpg",
+    "stack": "Vue.js"
   },
   "2": {
     "title": "YUME",
     "description": "YUME is a Fullstack project was created during my semester in Japan. I wanted to develop a web application for couples and friends to learn to know each others with questions, and quizzes.",
     "url": "https://github.com/diepaudrey/frontend-yume",
-    "illustration": "YUME.png"
+    "illustration": "YUME.png",
+    "stack": "React.js, Express.js, MySQL"
   },
   "3": {
     "title": "Etudate",
     "description": "Etudate is a dating app for students. It is a Fullstack project group.  ",
     "url": "https://etudate.quentinaugey.fr/routeur.php/accueil",
-    "illustration": "etudate.png"
+    "illustration": "etudate.png",
+    "stack": "Javascript, PHP"
   },
   "4": {
     "title": "Guess My RGB",
     "description": "Guess My RGB is a game where you try to find the correct RGB combination to win. It uses probability laws to help determine the final color.",
     "url": "https://guess-my-rgb.netlify.app/",
-    "illustration": "rgb.png"
+    "illustration": "rgb.png",
+    "stack": "Javascript"
   },
   "5": {
     "title": "Thomas was alone",
     "description": "This project is inspired by the platform game Thomas Was Alone.",
     "url": "https://github.com/Rosiflette/IMAC_S2_ThomasWasAlone",
-    "illustration": "thomas.png"
+    "illustration": "thomas.png",
+    "stack": "C++, OpenGL"
   }
 }

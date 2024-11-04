@@ -9,6 +9,7 @@
         />
         <div class="overlay" @click="openProject">
           <h2>Check {{ props.project?.title }}</h2>
+          <p class="stack">{{ props.project?.stack }}</p>
         </div>
       </div>
 
@@ -171,6 +172,10 @@ const openProject = () => {
     animation: color 2s ease;
     color: var(--red);
     cursor: pointer;
+  }
+
+  .stack {
+    color: var(--vt-c-white-soft);
   }
 }
 </style>

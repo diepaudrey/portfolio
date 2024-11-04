@@ -52,6 +52,7 @@ export default {
 @media screen and (max-width: 480px) {
   .title-container {
     justify-content: end;
+    display: flex;
     img {
       width: 45%;
     }
