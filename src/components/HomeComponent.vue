@@ -16,12 +16,11 @@
             <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
               <p>
                 Hey, I'm Audrey DIEP! <br />
-                I'm a web developer, and I created this website to share projects and photos that
-                I'm proud of. <br />
-                I'm a creative person who enjoys all forms of art—videos, photography, drawing, and
-                design. <br />
-                The design of this site is inspired by my semester in Japan in 2023. I'm incredibly
-                grateful for this amazing experience!
+                I'm a web developer, and I created this website to share projects, photos and more !
+                <br />
+                I'm a creative person who enjoys all forms of art : videos, photography, drawing,
+                and design. <br />
+                The design of this site is inspired by my semester in Japan in 2023.
               </p>
             </transition>
           </div>
