@@ -1,10 +1,10 @@
 <template>
   <nav class="nav-container">
     <div class="nav-bar">
-      <RouterLink to="/">About</RouterLink>
-      <img src="../assets/logo.svg" alt="Minimalist sun design" />
-      <RouterLink to="/projects">Projects</RouterLink>
-      <RouterLink to="/gallery">Gallery</RouterLink>
+      <RouterLink to="/" class="nav-link">About</RouterLink>
+      <img class="logo" src="../assets/logo.svg" alt="Minimalist sun design" />
+      <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
+      <RouterLink to="/gallery" class="nav-link">Gallery</RouterLink>
     </div>
   </nav>
 </template>
@@ -71,7 +71,6 @@
     }
   }
   .nav-container {
-    animation: folding 0.3s ease;
     height: 7vh;
     background-color: var(--vt-c-black);
     border-radius: 0 0 50px 50px;
@@ -83,35 +82,12 @@
   }
 
   .nav-container:hover {
-    height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: unfolding 0.3s ease;
+    transition: 0.5s;
     border-bottom: solid 2px var(--vt-c-text-dark-2);
-  }
-}
-
-@keyframes unfolding {
-  0% {
-    height: 7vh;
-    border-bottom: solid 2px rgba(129, 129, 129, 0.5);
-  }
-  100% {
-    height: 10vh;
-    border-bottom: solid 2px var(--vt-c-text-dark-2);
-  }
-}
-
-@keyframes folding {
-  0% {
-    height: 10vh;
-    border-bottom: solid 2px var(--vt-c-text-dark-2);
-  }
-  100% {
-    height: 7vh;
-    border-bottom: solid 2px rgba(129, 129, 129, 0.5);
   }
 }
 </style>
