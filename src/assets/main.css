@@ -36,7 +36,8 @@ a:hover {
       radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
       radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
     background-color: var(--vt-c-black);
-    background-size: 180% 500%;
+    background-size: 180% 180%;
+    background-attachment: fixed;
     z-index: -1;
     animation: rotation 10s ease infinite;
   }
@@ -62,7 +63,8 @@ a:hover {
       radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
       radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
     background-color: var(--vt-c-black);
-    background-size: 100% 500%;
+    background-size: 180% 180%;
+    background-attachment: fixed;
     z-index: -1;
     animation: rotation 10s ease infinite;
   }
@@ -86,7 +88,8 @@ a:hover {
       radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center,
       radial-gradient(circle at 100% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 30%) center;
     background-color: var(--vt-c-black);
-    background-size: 180% 500%;
+    background-size: 180% 180%;
+    background-attachment: fixed;
     z-index: -1;
     animation: rotation 10s ease infinite;
   }

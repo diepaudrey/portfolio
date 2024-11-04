@@ -3,7 +3,7 @@
     <div class="nav-bar">
       <RouterLink to="/">About</RouterLink>
       <img src="../assets/logo.svg" alt="Minimalist sun design" />
-      <RouterLink to="/projects">Web Projects</RouterLink>
+      <RouterLink to="/projects">Projects</RouterLink>
       <RouterLink to="/gallery">Gallery</RouterLink>
     </div>
   </nav>
@@ -14,7 +14,7 @@
 <style scoped>
 @media screen and (max-width: 480px) {
   .nav-bar {
-    padding-top: 10px;
+    padding: 10px 20px 10px 20px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -28,7 +28,7 @@
   .nav-container {
     height: 7vh;
     background-color: var(--vt-c-black);
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 25px 25px;
     border-bottom: solid 1px rgba(129, 129, 129, 0.5);
     display: flex;
     flex-direction: column;
