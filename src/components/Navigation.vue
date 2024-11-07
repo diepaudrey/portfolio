@@ -2,7 +2,9 @@
   <nav class="nav-container">
     <div class="nav-bar">
       <RouterLink to="/" class="nav-link">About</RouterLink>
-      <img class="logo" src="../assets/logo.svg" alt="Minimalist sun design" />
+      <RouterLink to="/" class="nav-link"
+        ><img class="logo" src="../assets/logo.svg" alt="Minimalist sun design"
+      /></RouterLink>
       <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
       <RouterLink to="/gallery" class="nav-link">Gallery</RouterLink>
     </div>
@@ -13,17 +15,17 @@
 
 <style scoped>
 @media screen and (max-width: 480px) {
+  .logo {
+    margin-top: 10px;
+    width: 25vw;
+  }
   .nav-bar {
     padding: 10px 20px 10px 20px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     animation: opacity 3s ease;
     font-size: 20px;
-    img {
-      margin-top: 10px;
-      width: 30%;
-    }
   }
   .nav-container {
     height: 7vh;
@@ -37,17 +39,17 @@
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
+  .logo {
+    margin-top: 10px;
+    width: 15vw;
+  }
   .nav-bar {
     padding-top: 10px;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     animation: opacity 3s ease;
     font-size: 24px;
-    img {
-      margin-top: 10px;
-      width: 30%;
-    }
   }
   .nav-container {
     height: 7vh;
@@ -61,10 +63,14 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .logo {
+    margin-top: 10px;
+    width: 5vw;
+  }
   .nav-bar {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     animation: opacity 3s ease;
     img {
       margin-top: 8px;

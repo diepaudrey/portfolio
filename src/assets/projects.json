@@ -1,21 +1,21 @@
 {
   "1": {
     "title": "Valorant App",
-    "description": "Using the Valorant API, I developped an application that contains all the agents, weapons, and maps that can be found it the game. Each page has a special functionnality.",
+    "description": "Using the Valorant API, I developed an application that contains all the agents, weapons, and maps that can be found in the game. Each page has a unique functionality.",
     "url": "https://valorant-ad.netlify.app/#/",
     "illustration": "valorant.jpg",
     "stack": "Vue.js"
   },
   "2": {
     "title": "YUME",
-    "description": "YUME is a Fullstack project was created during my semester in Japan. I wanted to develop a web application for couples and friends to learn to know each others with questions, and quizzes.",
+    "description": "YUME is a full-stack project created during my semester in Japan. I wanted to develop a web application for couples and friends to get to know each other better through questions and quizzes.",
     "url": "https://github.com/diepaudrey/frontend-yume",
     "illustration": "YUME.png",
     "stack": "React.js, Express.js, MySQL"
   },
   "3": {
     "title": "Etudate",
-    "description": "Etudate is a dating app for students. It is a Fullstack project group.  ",
+    "description": "Etudate is a dating app designed for students. It is a full-stack group project.",
     "url": "https://etudate.quentinaugey.fr/routeur.php/accueil",
     "illustration": "etudate.png",
     "stack": "Javascript, PHP"
