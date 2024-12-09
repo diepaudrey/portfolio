@@ -2,10 +2,11 @@
   <nav class="nav-container">
     <div class="nav-bar">
       <RouterLink to="/" class="nav-link">About</RouterLink>
+      <RouterLink to="/design" class="nav-link">Design</RouterLink>
       <RouterLink to="/" class="nav-link"
         ><img class="logo" src="../assets/logo.svg" alt="Minimalist sun design"
       /></RouterLink>
-      <RouterLink to="/projects" class="nav-link">Projects</RouterLink>
+      <RouterLink to="/projects" class="nav-link">Web</RouterLink>
       <RouterLink to="/gallery" class="nav-link">Gallery</RouterLink>
     </div>
   </nav>
@@ -25,7 +26,7 @@
     justify-content: center;
     align-items: center;
     animation: opacity 3s ease;
-    font-size: 20px;
+    font-size: 16px;
   }
   .nav-container {
     height: 7vh;
@@ -49,7 +50,7 @@
     justify-content: center;
     align-items: center;
     animation: opacity 3s ease;
-    font-size: 24px;
+    font-size: 20px;
   }
   .nav-container {
     height: 7vh;

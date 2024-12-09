@@ -1,21 +1,21 @@
 <template>
   <transition name="fade-right">
     <div class="title-container" v-show="showTitle">
-      <h1>Web Projects</h1>
+      <h1>Design</h1>
       <img src="../assets/graphic2.svg" alt="Minimalist Graphic Design" />
     </div>
   </transition>
   <div class="grid">
-    <div v-for="(project, key) in projectsData">
-      <Project :project="project" :index="Number(key)" />
+    <div v-for="(design, key) in designData">
+      <Design :design="design" :index="Number(key)" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import projectsData from '../assets/projects.json'
-import Project from './Project.vue'
+import designData from '../assets/design.json'
+import Design from './Design.vue'
 
 const showTitle = ref(false)
 onMounted(() => {

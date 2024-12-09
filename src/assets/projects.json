@@ -4,14 +4,15 @@
     "description": "Using the Valorant API, I developed an application that contains all the agents, weapons, and maps that can be found in the game. Each page has a unique functionality.",
     "url": "https://valorant-ad.netlify.app/#/",
     "illustration": "valorant.jpg",
-    "stack": "Vue.js"
+    "stack": "Vue.js, Figma"
   },
   "2": {
     "title": "YUME",
     "description": "YUME is a full-stack project created during my semester in Japan. I wanted to develop a web application for couples and friends to get to know each other better through questions and quizzes.",
     "url": "https://github.com/diepaudrey/frontend-yume",
     "illustration": "YUME.png",
-    "stack": "React.js, Express.js, MySQL"
+    "stack": "React.js, Express.js, MySQL, ",
+    "design-illustration": "YUME-design.png"
   },
   "3": {
     "title": "Etudate",
