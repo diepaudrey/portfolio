@@ -2,16 +2,19 @@
   "1": {
     "title": "YUME",
     "description": "YUME is a full-stack project created during my semester in Japan. I wanted to develop a web application for couples and friends to get to know each other better through questions and quizzes. For the design, I wanted to create a calm atmosphere with pastel colors. ",
-    "illustration": "YUME-design.png"
+    "illustration": "YUME-design.png",
+    "size": "landscape"
   },
   "2": {
     "title": "Cartography of cemetery Père Lachaise",
     "description": "The aim of this project is to give the Père Lachaise cemetery a new identity, inspired by the Pop Art movement, with a colourful and fun visual identity.",
-    "illustration": "cartographie.png"
+    "illustration": "cartographie.png",
+    "size": "landscape"
   },
   "3": {
     "title": "Badminton Event",
     "description": "Design of a poster for an event organised by my Badminton club. Made on Figma.",
-    "illustration": "badminton.png"
+    "illustration": "badminton.png",
+    "size": "portrait"
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <transition appear @before-enter="beforeEnter" @enter="enter">
     <div class="main-container" v-if="props.index % 2 !== 0">
-      <div class="picture-container" v-show="showPicture">
+      <div :class="`picture-container ${props.design.size}`" v-show="showPicture">
         <img
           :src="`/assets/design/${props.design.illustration}`"
           alt="project illustration"
@@ -19,12 +19,12 @@
 
     <div class="main-container" v-else>
       <div class="text">
-        <h2 class="text-link">{{ props.design.title }}</h2>
+        <h2>{{ props.design.title }}</h2>
         <p>
           {{ props.design?.description }}
         </p>
       </div>
-      <div class="picture-container" v-show="showPicture">
+      <div :class="`picture-container ${props.design.size}`" v-show="showPicture">
         <img
           :src="`/assets/design/${props.design.illustration}`"
           alt="project illustration"
@@ -150,9 +150,11 @@ onMounted(() => {
 }
 @media screen and (min-width: 1024px) {
   .picture-container {
+    border-radius: 50px;
+    overflow: hidden;
     img {
-      border-radius: 50px;
-      width: 45vw;
+      object-fit: cover;
+      width: 100%;
     }
   }
   .main-container {

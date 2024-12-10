@@ -177,6 +177,16 @@ a:hover {
     justify-content: center;
     align-items: center;
   }
+
+  .portrait {
+    width: 30vw;
+  }
+
+  .landscape {
+    aspect-ratio:
+      21/29,
+      7;
+  }
 }
 
 @keyframes rotation {
