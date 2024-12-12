@@ -37,6 +37,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
@@ -61,6 +64,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -86,6 +92,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
   .nav-container:hover {

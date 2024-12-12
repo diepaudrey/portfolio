@@ -1,17 +1,29 @@
 {
   "1": {
+    "title": "@Eat'ude",
+    "description": "The aim of this UX/UI project was to create from scratch the design of a mobile application with the creation of personas, wireframes and prototypes.",
+    "illustration": "ateatude.png",
+    "size": "landscape"
+  },
+  "2": {
+    "title": "Villa Petite Fleur",
+    "description": "Design and layout of a showcase website for a holiday accomodation for mobile and desktop.",
+    "illustration": "Villa-Petite-Fleur.png",
+    "size": "landscape"
+  },
+  "3": {
     "title": "YUME",
     "description": "YUME is a full-stack project created during my semester in Japan. I wanted to develop a web application for couples and friends to get to know each other better through questions and quizzes. For the design, I wanted to create a calm atmosphere with pastel colors. ",
     "illustration": "YUME-design.png",
     "size": "landscape"
   },
-  "2": {
+  "4": {
     "title": "Cartography of cemetery Père Lachaise",
     "description": "The aim of this project is to give the Père Lachaise cemetery a new identity, inspired by the Pop Art movement, with a colourful and fun visual identity.",
     "illustration": "cartographie.png",
     "size": "landscape"
   },
-  "3": {
+  "5": {
     "title": "Badminton Event",
     "description": "Design of a poster for an event organised by my Badminton club. Made on Figma.",
     "illustration": "badminton.png",

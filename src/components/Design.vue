@@ -1,6 +1,6 @@
 <template>
   <transition appear @before-enter="beforeEnter" @enter="enter">
-    <div class="main-container" v-if="props.index % 2 !== 0">
+    <div class="design-container-desktop" v-if="props.index % 2 !== 0">
       <div :class="`picture-container ${props.design.size}`" v-show="showPicture">
         <img
           :src="`/assets/design/${props.design.illustration}`"
@@ -16,8 +16,7 @@
         </p>
       </div>
     </div>
-
-    <div class="main-container" v-else>
+    <div class="design-container-desktop" v-else>
       <div class="text">
         <h2>{{ props.design.title }}</h2>
         <p>
@@ -30,6 +29,25 @@
           alt="project illustration"
           loading="lazy"
         />
+      </div>
+    </div>
+  </transition>
+
+  <transition appear @before-enter="beforeEnter" @enter="enter">
+    <div class="design-container-mobile">
+      <div :class="`picture-container ${props.design.size}`" v-show="showPicture">
+        <img
+          :src="`/assets/design/${props.design.illustration}`"
+          alt="project illustration"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="text">
+        <h2>{{ props.design.title }}</h2>
+        <p>
+          {{ props.design?.description }}
+        </p>
       </div>
     </div>
   </transition>
@@ -93,11 +111,14 @@ onMounted(() => {
       width: 100%;
     }
   }
-  .main-container {
+  .design-container-mobile {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 0 3% 0 3%;
+  }
+  .design-container-desktop {
+    display: none;
   }
   .text {
     display: flex;
@@ -127,11 +148,14 @@ onMounted(() => {
       width: 100%;
     }
   }
-  .main-container {
+  .design-container-mobile {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 0 3% 0 3%;
+  }
+  .design-container-desktop {
+    display: none;
   }
   .text {
     display: flex;
@@ -157,20 +181,22 @@ onMounted(() => {
       width: 100%;
     }
   }
-  .main-container {
+  .design-container-desktop {
     display: flex;
     flex-direction: row;
     justify-content: start;
     padding: 0 3% 0 3%;
+  }
+
+  .design-container-mobile {
+    display: none;
   }
   .text {
     display: flex;
     flex-direction: column;
     justify-content: start;
     padding: 3%;
-    p {
-      width: 80%;
-    }
+    width: 80%;
   }
 
   .stack {
