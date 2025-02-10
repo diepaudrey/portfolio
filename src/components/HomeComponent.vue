@@ -16,7 +16,8 @@
             <transition appear @beforeEnter="textBeforeEnter" @enter="textEnter">
               <p>
                 Hey, I'm Audrey DIEP! <br />
-                I'm a web developer, and I created this website to share projects, photos and more !
+                I'm a Creative Web developer and designer, and I created this website to share
+                projects, photos and more !
                 <br />
                 I'm a creative person who enjoys all forms of art : videos, photography, drawing,
                 and design. <br />
