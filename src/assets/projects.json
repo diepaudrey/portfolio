@@ -1,10 +1,17 @@
 {
-  "1": {
+  "0": {
     "title": "Valorant App",
     "description": "Using the Valorant API, I developed an application that contains all the agents, weapons, and maps that can be found in the game. Each page has a unique functionality.",
     "url": "https://valorant-ad.netlify.app/#/",
     "illustration": "valorant.jpg",
     "stack": "Vue.js, Figma"
+  },
+  "1": {
+    "title": "Villa Petite Fleur",
+    "description": "I create the website for Villa Petite Fleur, a guest house located near the CDG airport. The website is designed to be simple and to list all the facilities and information about the guest house and its surroundings.",
+    "url": "https://villa-petite-fleur.fr/",
+    "illustration": "Villa-Petite-Fleur.png",
+    "stack": "React.js, Tailwind, Figma"
   },
   "2": {
     "title": "YUME",
